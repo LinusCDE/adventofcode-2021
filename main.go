@@ -39,7 +39,7 @@ func main() {
 				fmt.Println("Part can either be 1 or 2!")
 				return
 			}
-			fmt.Println(day, part)
+			//fmt.Println(day, part)
 
 			filename, err := flags["input-file"].GetString()
 			if err != nil {
