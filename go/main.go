@@ -77,6 +77,10 @@ func main() {
 				result, result_err = solve_day1_part1(filecontent)
 			} else if day == 1 && part == 2 {
 				result, result_err = solve_day1_part2(filecontent)
+			} else if day == 2 && part == 1 {
+				result, result_err = solve_day2_part1(filecontent)
+			} else if day == 2 && part == 2 {
+				result, result_err = solve_day2_part2(filecontent)
 			} else {
 				fmt.Printf("Day %d part %d is not implemented, yet.\n", day, part)
 				return

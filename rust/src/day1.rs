@@ -1,4 +1,4 @@
-pub fn solve_part_1(input: &str) -> anyhow::Result<usize> {
+pub fn solve_part_1(input: &str) -> anyhow::Result<impl std::fmt::Display> {
     let mut increments: usize = 0;
     let mut last_measurement: Option<u64> = None;
 
@@ -18,7 +18,7 @@ pub fn solve_part_1(input: &str) -> anyhow::Result<usize> {
     Ok(increments)
 }
 
-pub fn solve_part_2(input: &str) -> anyhow::Result<usize> {
+pub fn solve_part_2(input: &str) -> anyhow::Result<impl std::fmt::Display> {
     let mut increments: usize = 0;
     let mut last_measurement_sum: Option<u64> = None;
     let mut window = (None::<u64>, None::<u64>, None::<u64>);

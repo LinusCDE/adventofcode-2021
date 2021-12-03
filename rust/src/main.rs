@@ -1,4 +1,6 @@
 #[macro_use]
+extern crate anyhow;
+#[macro_use]
 extern crate log;
 
 #[macro_use]
@@ -9,6 +11,7 @@ use clap::{crate_authors, crate_version, Parser};
 use std::{env, fs, path::PathBuf, process::exit, time::Instant};
 
 mod day1;
+mod day2;
 
 #[derive(Debug, Parser)]
 #[clap(version = crate_version!(), author = crate_authors!())]
@@ -52,6 +55,11 @@ fn main() -> Result<()> {
         1 => match opts.part {
             1 => day1::solve_part_1(&filecontent).map(|v| v.to_string()),
             2 => day1::solve_part_2(&filecontent).map(|v| v.to_string()),
+            _ => unreachable!(),
+        },
+        2 => match opts.part {
+            1 => day2::solve_part_1(&filecontent).map(|v| v.to_string()),
+            2 => day2::solve_part_2(&filecontent).map(|v| v.to_string()),
             _ => unreachable!(),
         },
         _ => {
