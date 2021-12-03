@@ -1,4 +1,4 @@
-module github.com/LinusCDE/adventofcode-2021
+module github.com/LinusCDE/adventofcode-2021/go
 
 go 1.17
 

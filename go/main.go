@@ -48,7 +48,7 @@ func main() {
 				return
 			}
 			if filename == "DEFAULT" {
-				filename = "input/day" + strconv.FormatInt(day, 10) + ".txt"
+				filename = "../input/day" + strconv.FormatInt(day, 10) + ".txt"
 			}
 
 			fmt.Println("Using file \"" + filename + "\"")
