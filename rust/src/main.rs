@@ -1,3 +1,5 @@
+#![feature(drain_filter)]
+
 #[macro_use]
 extern crate anyhow;
 #[macro_use]
@@ -13,6 +15,7 @@ use std::{env, fs, path::PathBuf, process::exit, time::Instant};
 mod day1;
 mod day2;
 mod day3;
+mod day4;
 
 #[derive(Debug, Parser)]
 #[clap(version = crate_version!(), author = crate_authors!())]
@@ -66,6 +69,11 @@ fn main() -> Result<()> {
         3 => match opts.part {
             1 => day3::solve_part_1(&filecontent).map(|v| v.to_string()),
             2 => day3::solve_part_2(&filecontent).map(|v| v.to_string()),
+            _ => unreachable!(),
+        },
+        4 => match opts.part {
+            1 => day4::solve_part_1(&filecontent).map(|v| v.to_string()),
+            2 => day4::solve_part_2(&filecontent).map(|v| v.to_string()),
             _ => unreachable!(),
         },
         _ => {
