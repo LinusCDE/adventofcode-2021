@@ -18,6 +18,7 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 
 #[derive(Debug, Parser)]
 #[clap(version = crate_version!(), author = crate_authors!())]
@@ -86,6 +87,11 @@ fn main() -> Result<()> {
         6 => match opts.part {
             1 => day6::solve_part_1(&filecontent).map(|v| v.to_string()),
             2 => day6::solve_part_2(&filecontent).map(|v| v.to_string()),
+            _ => unreachable!(),
+        },
+        7 => match opts.part {
+            1 => day7::solve_part_1(&filecontent).map(|v| v.to_string()),
+            2 => day7::solve_part_2(&filecontent).map(|v| v.to_string()),
             _ => unreachable!(),
         },
         _ => {
